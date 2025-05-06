@@ -20,7 +20,7 @@ function Home() {
       
       setLoading(true);
       try {
-        const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/blogs`, {
+        const response = await fetch(`http://localhost:7000/api/blogs`, {
           headers: { Authorization: `Bearer ${user.token}` },
         });
 

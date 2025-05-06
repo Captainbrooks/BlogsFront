@@ -15,7 +15,7 @@ function BlogDetails({ blog, setLoading, setErrorMessage, showBlog, setShowBlog 
     if (!user) return;
 
     setLoading(true);
-    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/blogs/${blog._id}`, {
+    const response = await fetch(`http://localhost:7000/api/blogs/${blog._id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${user.token}`,

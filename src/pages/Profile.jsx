@@ -12,7 +12,7 @@ const Profile = () => {
     const fetchUserDetails = async (email) => {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_BASE_URL}/api/user/getProfile/${email}`
+          `http://localhost:7000/api/user/getProfile/${email}`
         );
 
         if (response.ok) {
@@ -39,7 +39,7 @@ const Profile = () => {
     };
 
     const response = await fetch(
-      `${import.meta.env.VITE_BASE_URL}/api/user/UpdateUser/${user.email}`,
+      `http://localhost:7000/api/user/UpdateUser/${user.email}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

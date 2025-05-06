@@ -30,7 +30,7 @@ function BlogEditForm({ blog, edit, setEdit, setShowBlog, showBlog }) {
     };
 
     const response = await fetch(
-      `${import.meta.env.VITE_BASE_URL}/api/blogs/${blog._id}`,
+      `http://localhost:7000/api/blogs/${blog._id}`,
       {
         method: "PATCH",
         body: JSON.stringify(editedBlog),

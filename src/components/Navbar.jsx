@@ -18,7 +18,7 @@ function Navbar() {
 
   useEffect(() => {
     const fetchUserDetails = async (email) => {
-      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/user/getProfile/` + email, {
+      const response = await fetch(`http://localhost:7000/api/user/getProfile/` + email, {
         method: "GET",
       });
 
@@ -37,7 +37,7 @@ function Navbar() {
     <nav className="bg-white shadow-md border-b">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-red-600">
-          Milton<span className="text-gray-600 text-sm">Blogs</span>
+          M<span className="text-gray-600 text-sm">Blogs</span>
         </Link>
 
         {isAuth ? (

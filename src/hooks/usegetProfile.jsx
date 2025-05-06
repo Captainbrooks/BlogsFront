@@ -20,7 +20,7 @@ export const useGetProfile=()=>{
       const reqEmail=userInfo.email;
    
       try {
-        const response=await fetch(`${import.meta.env.VITE_BASE_URL}/api/user/getProfile/`+ reqEmail,{
+        const response=await fetch(`http://localhost:7000/api/user/getProfile/`+ reqEmail,{
             method:"GET"
            });
         

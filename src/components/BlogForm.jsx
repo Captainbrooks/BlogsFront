@@ -24,7 +24,7 @@ function BlogForm({ setShowBlog, setShowForm, setLoading, setErrorMessage, error
 
     const blog = { title, body, author };
 
-    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/blogs`, {
+    const response = await fetch(`http://localhost:7000/api/blogs`, {
       method: "POST",
       body: JSON.stringify(blog),
       headers: {
